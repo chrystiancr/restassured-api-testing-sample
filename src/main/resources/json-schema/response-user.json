@@ -1,0 +1,75 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "id",
+        "email",
+        "first_name",
+        "last_name",
+        "avatar"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/data/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            2
+          ]
+        },
+        "email": {
+          "$id": "#/properties/data/properties/email",
+          "type": "string",
+          "title": "The Email Schema",
+          "default": "",
+          "examples": [
+            "janet.weaver@reqres.in"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "first_name": {
+          "$id": "#/properties/data/properties/first_name",
+          "type": "string",
+          "title": "The First_name Schema",
+          "default": "",
+          "examples": [
+            "Janet"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "last_name": {
+          "$id": "#/properties/data/properties/last_name",
+          "type": "string",
+          "title": "The Last_name Schema",
+          "default": "",
+          "examples": [
+            "Weaver"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "avatar": {
+          "$id": "#/properties/data/properties/avatar",
+          "type": "string",
+          "title": "The Avatar Schema",
+          "default": "",
+          "examples": [
+            "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}

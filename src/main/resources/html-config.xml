@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>dark</theme>
+
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>http</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Report Test</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        <reportName>Status Report Test</reportName>
+
+        <!-- timestamp format -->
+        <timeStampFormat>dd/MM/yyyy HH:mm:ss</timeStampFormat>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
