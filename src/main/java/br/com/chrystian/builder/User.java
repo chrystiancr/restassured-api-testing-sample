@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class User {
 
-    private String email;
-    private String password;
+    @Builder.Default private String email = "eve.holt@reqres.in";
+    @Builder.Default private String password = "password";
 
 }
