@@ -2,12 +2,13 @@ package br.com.chrystian.tests;
 
 import br.com.chrystian.utils.DefaultValues;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
 import java.io.File;
 
+import static br.com.chrystian.service.UserRequestSpecification.getRequestSpecification;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class ContractTest extends TestBase {
 
@@ -15,12 +16,12 @@ public class ContractTest extends TestBase {
     public void checkContractTest() {
 
         given()
-                .spec(requestSpecification)
+                .spec(getRequestSpecification())
                 .when()
                 .get("/users/2")
                 .then()
-                .statusCode(HttpStatus.SC_OK)
                 .assertThat()
+                .statusCode(SC_OK)
                 .body(JsonSchemaValidator.matchesJsonSchema(new File(DefaultValues.JSON_SCHEMA_PATH + "response-user.json")));
     }
 
